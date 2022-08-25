@@ -1,21 +1,18 @@
 import React, { useState } from 'react'
 import { ShareIcon } from './assets/ShareIcon'
-import InputContainer from './InutContainer'
+import Container from './Container'
 import './Search.css'
-// import { ShareIcon } from '../assets/ShareIcon'
-// import InputContainer from './InputContainer'
-// import { ChakraProvider } from '@chakra-ui/react'
 import { ChakraProvider } from '@chakra-ui/react'
 
 const Search = () => {
-  const [clickState, setClickState] = useState(false)
+  const [clickState, setClickState] = useState(true)
   return (
     <ChakraProvider>
       <button className="container" onClick={() => setClickState(!clickState)}>
         Share
         <ShareIcon />
       </button>
-      {clickState ? <InputContainer /> : null}
+      {clickState ? <Container /> : null}
     </ChakraProvider>
   )
 }
