@@ -1,3 +1,7 @@
+import { PhoneIcon } from '@chakra-ui/icons'
+import { Square } from '@chakra-ui/react'
+import { Avatar } from '../assets/Avatar'
+
 const USERS = [
   {
     id: 1,
@@ -5,6 +9,7 @@ const USERS = [
     email: 'andy@gmail.com',
     age: 32,
     group: false,
+    image: <Avatar />,
     person: true,
   },
   {
@@ -13,6 +18,7 @@ const USERS = [
     email: 'bob@gmail.com',
     age: 30,
     group: false,
+    image: <Avatar />,
     person: true,
   },
   {
@@ -21,6 +27,7 @@ const USERS = [
     email: 'tomhulk@gmail.com',
     age: 40,
     group: false,
+    image: <Avatar />,
     person: true,
   },
   {
@@ -29,12 +36,53 @@ const USERS = [
     email: 'tomhank@gmail.com',
     age: 50,
     group: false,
+    image: <Avatar />,
     person: true,
   },
-  { id: 5, name: 'Engineering', group: true, person: false },
-  { id: 6, name: 'Finance', group: true, person: false },
-  { id: 7, name: 'IT', group: true, person: false },
-  { id: 8, name: 'Design', group: true, person: false },
+  {
+    id: 5,
+    name: 'Engineering',
+    group: true,
+    image: (
+      <Square size="40px" bg="purple.700" color="white">
+        <PhoneIcon />
+      </Square>
+    ),
+    person: false,
+  },
+  {
+    id: 6,
+    name: 'Finance',
+    group: true,
+    image: (
+      <Square size="40px" bg="purple.700" color="white">
+        <PhoneIcon />
+      </Square>
+    ),
+    person: false,
+  },
+  {
+    id: 7,
+    name: 'IT',
+    group: true,
+    image: (
+      <Square size="40px" bg="purple.700" color="white">
+        <PhoneIcon />
+      </Square>
+    ),
+    person: false,
+  },
+  {
+    id: 8,
+    name: 'Design',
+    group: true,
+    image: (
+      <Square size="40px" bg="purple.700" color="white">
+        <PhoneIcon />
+      </Square>
+    ),
+    person: false,
+  },
 ]
 
 export default USERS

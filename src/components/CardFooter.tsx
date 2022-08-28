@@ -1,7 +1,7 @@
 import { QuestionOutlineIcon, LinkIcon } from '@chakra-ui/icons'
 import { Box, Text } from '@chakra-ui/react'
 import React from 'react'
-import Sharing from './Sharing'
+import Sharing from '../stories/SharingContainer'
 
 const CardFooter = () => {
   return (

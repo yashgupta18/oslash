@@ -3,8 +3,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { ChakraProvider } from '@chakra-ui/react'
 import SelectionProvider from '../selectionContext'
-import { ShareIcon } from './assets/ShareIcon'
-import ShareButton from './ShareButton'
+import { ShareIcon } from '../assets/ShareIcon'
+import ShareButton from '../components/ShareButton'
 import Container from './Container'
 
 export default {

@@ -1,7 +1,6 @@
-// import React from 'react'
 import { Box, Input, InputGroup, InputRightAddon } from '@chakra-ui/react'
-import Sharing from './Sharing'
-import { InsigniaIcon } from './assets/InsigniaIcon'
+import Sharing from './SharingContainer'
+import { InsigniaIcon } from '../assets/InsigniaIcon'
 import React from 'react'
 import { selectionContext } from '../selectionContext'
 import SharedDropdown from './SharedDropdown'
@@ -36,7 +35,7 @@ const InputShare = ({ setIsClicked }: InputShareProps) => {
         ? person.map((item: UsersType, index: React.Key) => (
             <Sharing
               key={index}
-              icon={<InsigniaIcon />}
+              icon={item.image}
               heading={item.name}
               footer={item.email}
             >

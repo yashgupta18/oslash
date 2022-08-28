@@ -1,13 +1,12 @@
-import { PhoneIcon } from '@chakra-ui/icons'
-import { Button, Flex, Avatar, Square } from '@chakra-ui/react'
+import { Button, Flex } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { selectionContext } from '../selectionContext'
 
 import './Filter.css'
-import InputSearch from './InputSearch'
+import InputSearch from '../components/InputSearch'
 import MenuDropdown from './MenuDropdown'
-import UserList from './UserList'
-import UserTag from './UserTag'
+import UserList from '../components/UserList'
+import UserTag from '../components/UserTag'
 
 import USERS from './userData'
 
@@ -16,6 +15,7 @@ interface FilterProps {
 }
 
 interface selectedProps {
+  image: React.ReactNode
   name?: string
   email?: string
 }
@@ -23,11 +23,12 @@ interface selectedProps {
 export interface UsersType {
   id: number
   name: string
-  email: string
-  age: number
+  email?: string
+  age?: number
   group: boolean
   person: boolean
   access?: string
+  image?: React.ReactNode
 }
 
 const Filter = ({ setIsClicked }: FilterProps) => {
@@ -36,7 +37,6 @@ const Filter = ({ setIsClicked }: FilterProps) => {
     selectionContext
   ) as any
   const [localAccess, setLocalAccess] = useState('')
-  // the value of the search field
   const [name, setName] = useState('')
   const [selected, setSelected] = useState<selectedProps>()
   // the search result
@@ -69,6 +69,7 @@ const Filter = ({ setIsClicked }: FilterProps) => {
           id: person.length,
           name: selected.name,
           email: selected.email,
+          image: selected.image,
           access: localAccess,
         },
       ])
@@ -120,10 +121,7 @@ const Filter = ({ setIsClicked }: FilterProps) => {
               (user) =>
                 user.person && (
                   <UserList obj={user} clickHandler={clickHandler}>
-                    <Avatar
-                      name="Dan Abrahmov"
-                      src="https://bit.ly/dan-abramov"
-                    />
+                    {user.image}
                   </UserList>
                 )
             )}
@@ -143,9 +141,7 @@ const Filter = ({ setIsClicked }: FilterProps) => {
               (user) =>
                 user.group && (
                   <UserList obj={user} clickHandler={clickHandler}>
-                    <Square size="40px" bg="purple.700" color="white">
-                      <PhoneIcon />
-                    </Square>
+                    {user.image}
                   </UserList>
                 )
             )}

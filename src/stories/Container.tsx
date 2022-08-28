@@ -1,9 +1,9 @@
 import { Box, Switch } from '@chakra-ui/react'
-import { GlobeIcon } from './assets/GlobeIcon'
+import { GlobeIcon } from '../assets/GlobeIcon'
 import InputShare from './InputShare'
-import Sharing from './Sharing'
-import CardFooter from './CardFooter'
-import React, { useState } from 'react'
+import Sharing from './SharingContainer'
+import CardFooter from '../components/CardFooter'
+import { useState } from 'react'
 import Filter from './Filter'
 
 const Container = () => {
