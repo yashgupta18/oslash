@@ -1,8 +1,6 @@
 import React from 'react'
 
-export const InsigniaIcon = (
-  props: React.SVGProps<SVGSVGElement>
-): JSX.Element => {
+export const InsigniaIcon = (): JSX.Element => {
   return (
     <svg
       width="40"
@@ -61,10 +59,10 @@ export const InsigniaIcon = (
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(22.5557 18.1568) rotate(105.445) scale(20.585 9.26609)"
         >
-          <stop stop-color="#FFFECB" />
-          <stop offset="0.344597" stop-color="#FEE4BF" />
-          <stop offset="0.695017" stop-color="#F0BDD0" />
-          <stop offset="1" stop-color="#FF8126" stop-opacity="0" />
+          <stop stopColor="#FFFECB" />
+          <stop offset="0.344597" stopColor="#FEE4BF" />
+          <stop offset="0.695017" stopColor="#F0BDD0" />
+          <stop offset="1" stopColor="#FF8126" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint1_linear_1_1569"
@@ -74,9 +72,9 @@ export const InsigniaIcon = (
           y2="12.376"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C0A9F0" stop-opacity="0" />
-          <stop offset="0.456382" stop-color="#C0A9F0" />
-          <stop offset="1" stop-color="#C0A9F0" stop-opacity="0" />
+          <stop stopColor="#C0A9F0" stopOpacity="0" />
+          <stop offset="0.456382" stopColor="#C0A9F0" />
+          <stop offset="1" stopColor="#C0A9F0" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_1_1569"
@@ -86,9 +84,9 @@ export const InsigniaIcon = (
           y2="12.7837"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C0A9F0" stop-opacity="0" />
-          <stop offset="0.461891" stop-color="#C0A9F0" />
-          <stop offset="1" stop-color="#C0A9F0" stop-opacity="0" />
+          <stop stopColor="#C0A9F0" stopOpacity="0" />
+          <stop offset="0.461891" stopColor="#C0A9F0" />
+          <stop offset="1" stopColor="#C0A9F0" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_1_1569"
@@ -98,8 +96,8 @@ export const InsigniaIcon = (
           y2="18.5931"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3FFFB5" stop-opacity="0.54" />
-          <stop offset="1" stop-color="#CDF9E8" stop-opacity="0" />
+          <stop stopColor="#3FFFB5" stopOpacity="0.54" />
+          <stop offset="1" stopColor="#CDF9E8" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint4_radial_1_1569"
@@ -109,8 +107,8 @@ export const InsigniaIcon = (
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(13.5068 19.0743) rotate(-116.953) scale(6.2404 12.2065)"
         >
-          <stop stop-color="#CBADEB" />
-          <stop offset="1" stop-color="#C2A6F1" stop-opacity="0" />
+          <stop stopColor="#CBADEB" />
+          <stop offset="1" stopColor="#C2A6F1" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint5_radial_1_1569"
@@ -120,8 +118,8 @@ export const InsigniaIcon = (
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(11.5668 30.3523) rotate(-124.631) scale(8.89753 11.7777)"
         >
-          <stop stop-color="#DC8DDC" />
-          <stop offset="1" stop-color="#DC8DDC" stop-opacity="0" />
+          <stop stopColor="#DC8DDC" />
+          <stop offset="1" stopColor="#DC8DDC" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint6_linear_1_1569"
@@ -131,8 +129,8 @@ export const InsigniaIcon = (
           y2="12.7609"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFB762" />
-          <stop offset="1" stop-color="#EBF3D0" stop-opacity="0" />
+          <stop stopColor="#FFB762" />
+          <stop offset="1" stopColor="#EBF3D0" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box } from '@chakra-ui/react'
-import { Text } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
+import Footer from './Footer'
+import Header from './Header'
 
 interface SharingProps {
   icon?: React.ReactNode
@@ -18,45 +19,30 @@ const Sharing = ({
   bgColor,
 }: SharingProps) => {
   return (
-    <Box
+    <Flex
       bg={bgColor ? bgColor : 'white'}
-      w="100%"
       p={2}
-      color="black"
-      display="flex"
-      justifyContent="space-between"
-      alignItems="center"
+      justify="space-between"
+      align="center"
       borderBottom=" 1px solid #E5E7EB"
     >
-      <Box display="flex" gap="8px" alignItems="center">
+      <Flex gap="8px" align="center">
         {icon}
         {heading && footer ? (
-          <Box display="flex" flexDirection="column">
-            <Text fontSize="16px" color="#111827">
-              {heading}
-            </Text>
-            <Text fontSize="14px" color="#6B7280">
-              {footer}
-            </Text>
-          </Box>
+          <Flex direction="column">
+            <Header header={heading} />
+            <Footer footer={footer} />
+          </Flex>
         ) : heading ? (
-          heading && (
-            <Text fontSize="16px" color="#111827">
-              {heading}
-            </Text>
-          )
+          heading && <Header header={heading} />
         ) : (
-          footer && (
-            <Text fontSize="14px" color="#6B7280">
-              {footer}
-            </Text>
-          )
+          footer && <Footer footer={footer} />
         )}
-      </Box>
+      </Flex>
       <Box position="relative" right="10px">
         {children}
       </Box>
-    </Box>
+    </Flex>
   )
 }
 

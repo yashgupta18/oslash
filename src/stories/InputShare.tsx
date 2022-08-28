@@ -1,40 +1,49 @@
-import React from 'react'
-import {
-  Box,
-  Select,
-  Input,
-  InputGroup,
-  InputRightAddon,
-} from '@chakra-ui/react'
+// import React from 'react'
+import { Box, Input, InputGroup, InputRightAddon } from '@chakra-ui/react'
 import Sharing from './Sharing'
 import { InsigniaIcon } from './assets/InsigniaIcon'
+import React from 'react'
+import { selectionContext } from '../selectionContext'
+import SharedDropdown from './SharedDropdown'
+import { UsersType } from './Filter'
 
-const InputShare = () => {
+interface InputShareProps {
+  setIsClicked: (isClicked: boolean) => void
+}
+
+const InputShare = ({ setIsClicked }: InputShareProps) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [person] = React.useContext(selectionContext) as any
+  console.log({ person })
   return (
     <Box bg="white" w="100%" color="black">
       <InputGroup size="sm" p={2}>
-        <Input placeholder="People, emails, groups" />
-        <InputRightAddon children="Invite" />
+        <Input
+          placeholder="People, emails, groups"
+          onClick={() => setIsClicked(true)}
+        />
+        <InputRightAddon>Invite</InputRightAddon>
       </InputGroup>
+
       <Sharing
         icon={<InsigniaIcon />}
         heading={'Everyone at OSlash'}
         footer={'25 workspace members'}
       >
-        <Select
-          placeholder="Select option"
-          size="sm"
-          bg="transparent"
-          color="#6B7280"
-          variant="unstyled"
-          _hover={{ bg: '##F3F4F6' }}
-          fontSize="12px"
-        >
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-        </Select>
+        <SharedDropdown />
       </Sharing>
+      {person.length > 0
+        ? person.map((item: UsersType, index: React.Key) => (
+            <Sharing
+              key={index}
+              icon={<InsigniaIcon />}
+              heading={item.name}
+              footer={item.email}
+            >
+              <SharedDropdown access={item?.access} />
+            </Sharing>
+          ))
+        : null}
     </Box>
   )
 }

@@ -1,8 +1,6 @@
 import React from 'react'
 
-export const ShareIcon = (
-  props: React.SVGProps<SVGSVGElement>
-): JSX.Element => {
+export const ShareIcon = (): JSX.Element => {
   return (
     <svg
       width="16"
