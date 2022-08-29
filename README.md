@@ -2,9 +2,9 @@
 
 ## Clone this repository and Run the following commands to view the components in local environment
 ### Navigate to project
-`cd oslash`
-`npm i`
-`npm run storybook`
+- `cd oslash`
+- `npm i`
+- `npm run storybook`
 
 After running the above commands navigate to following link in browser
 
