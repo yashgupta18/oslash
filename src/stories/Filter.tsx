@@ -134,7 +134,7 @@ const Filter = ({ setIsClicked }: FilterProps) => {
             )}
           </>
         ) : (
-          <h1 className="user">No results found</h1>
+          <h1 className="user">No Person found</h1>
         )}
 
         {foundUsers && foundUsers.length > 0 ? (
@@ -154,7 +154,7 @@ const Filter = ({ setIsClicked }: FilterProps) => {
             )}
           </>
         ) : (
-          <h1 className="user">No results found</h1>
+          <h1 className="user">No Group found</h1>
         )}
       </div>
     </>
