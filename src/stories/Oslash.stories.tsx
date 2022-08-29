@@ -21,6 +21,7 @@ const Template: ComponentStory<typeof ShareButton> = () => {
     <ChakraProvider>
       <SelectionProvider>
         <ShareButton
+          label={'Share'}
           clickState={clickState}
           setClickState={setClickState}
           icon={<ShareIcon />}

@@ -1,11 +1,13 @@
 import { Button } from '@chakra-ui/react'
 
 interface ShareButtonProps {
-  clickState: boolean
+  label: string
+  clickState?: boolean
   setClickState?: (clickState: boolean) => void
   icon: JSX.Element
 }
 const ShareButton = ({
+  label,
   clickState,
   setClickState,
   icon,
@@ -18,10 +20,11 @@ const ShareButton = ({
       variant="solid"
       background=" black"
       color=" white"
+      _hover={{ bg: 'black' }}
       onClick={() => setClickState && setClickState(!clickState)}
       {...rest}
     >
-      Share
+      {label}
     </Button>
   )
 }
