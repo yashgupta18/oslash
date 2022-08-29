@@ -1,4 +1,4 @@
-import { Box, Input, InputGroup, InputRightAddon } from '@chakra-ui/react'
+import { Box, Button, Input, InputGroup } from '@chakra-ui/react'
 import Sharing from './SharingContainer'
 import { InsigniaIcon } from '../assets/InsigniaIcon'
 import React from 'react'
@@ -13,7 +13,7 @@ interface InputShareProps {
 const InputShare = ({ setIsClicked }: InputShareProps) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [person] = React.useContext(selectionContext) as any
-  console.log({ person })
+
   return (
     <Box bg="white" w="100%" color="black">
       <InputGroup size="sm" p={2}>
@@ -21,9 +21,10 @@ const InputShare = ({ setIsClicked }: InputShareProps) => {
           placeholder="People, emails, groups"
           onClick={() => setIsClicked(true)}
         />
-        <InputRightAddon>Invite</InputRightAddon>
+        <Button borderRadius="0px" bg="#F9FAFB" _hover={{ bg: '#F9FAFB' }}>
+          Invite
+        </Button>
       </InputGroup>
-
       <Sharing
         icon={<InsigniaIcon />}
         heading={'Everyone at OSlash'}

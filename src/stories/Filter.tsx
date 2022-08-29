@@ -106,7 +106,14 @@ const Filter = ({ setIsClicked }: FilterProps) => {
           localAccess={localAccess}
           setLocalAccess={setLocalAccess}
         />
-        <Button onClick={() => rerouteHandler()}>Invite</Button>
+        <Button
+          onClick={() => rerouteHandler()}
+          borderRadius="0px"
+          bg="#FFF"
+          _hover={{ bg: '#FFF' }}
+        >
+          Invite
+        </Button>
       </Flex>
 
       <div className="user-list">
