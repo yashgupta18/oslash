@@ -17,7 +17,10 @@ const MenuDropdown = ({ localAccess, setLocalAccess }: MenuDropdownProps) => {
         {localAccess ? localAccess : 'Full access'}
         <ChevronDownIcon />
       </MenuDropdownButton>
-      <AccessList updateAccess={updateAccess} />
+      <AccessList
+        updateAccess={updateAccess}
+        list={['Full access', 'Can edit', 'Can view', 'No Access']}
+      />
     </Menu>
   )
 }

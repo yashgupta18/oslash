@@ -5,6 +5,7 @@ import Sharing from './SharingContainer'
 import CardFooter from '../components/CardFooter'
 import { useState } from 'react'
 import Filter from './Filter'
+import { LinkIcon, QuestionOutlineIcon } from '@chakra-ui/icons'
 
 const Container = () => {
   const [isClicked, setIsClicked] = useState(false)
@@ -31,7 +32,12 @@ const Container = () => {
         </>
       )}
       <Box bg="#F9FAFB" w="100%" color="black">
-        <CardFooter />
+        <CardFooter
+          leftTitle="learn about sharing"
+          rightTitle={'Copy Link'}
+          leftIcon={<QuestionOutlineIcon />}
+          rightIcon={<LinkIcon />}
+        />
       </Box>
     </Box>
   )

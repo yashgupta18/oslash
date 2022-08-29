@@ -98,7 +98,7 @@ const Filter = ({ setIsClicked }: FilterProps) => {
         ) : (
           <InputSearch
             name={name}
-            filter={filter}
+            onChange={(e) => filter(e)}
             placeholder="Search emails, names or groups"
           />
         )}

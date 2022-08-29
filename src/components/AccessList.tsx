@@ -3,12 +3,13 @@ import React from 'react'
 
 interface AccessListProps {
   updateAccess?: (role: string) => void
+  list: string[]
 }
 
-const AccessList = ({ updateAccess }: AccessListProps) => {
+const AccessList = ({ updateAccess, list }: AccessListProps) => {
   return (
     <MenuList>
-      {['Full access', 'Can edit', 'Can view', 'No Access'].map((item) => (
+      {list.map((item) => (
         <MenuItem key={item} onClick={() => updateAccess && updateAccess(item)}>
           {item}
         </MenuItem>

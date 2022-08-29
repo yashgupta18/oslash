@@ -14,7 +14,7 @@ const SharedDropdown = ({ access }: SharedDropdownProps) => {
         {access ? access : 'No access'}
         <ChevronDownIcon />
       </MenuDropdownButton>
-      <AccessList />
+      <AccessList list={['Full access', 'Can edit', 'Can view', 'No Access']} />
     </Menu>
   )
 }

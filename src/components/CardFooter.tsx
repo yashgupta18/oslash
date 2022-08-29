@@ -1,22 +1,34 @@
-import { QuestionOutlineIcon, LinkIcon } from '@chakra-ui/icons'
-import { Box, Text } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 import React from 'react'
-import Sharing from '../stories/SharingContainer'
+import IconText from './IconText'
 
-const CardFooter = () => {
+interface CardFooterProps {
+  leftTitle: string
+  rightTitle: string
+  leftIcon?: React.ReactNode
+  rightIcon?: React.ReactNode
+}
+
+const CardFooter = ({
+  leftTitle,
+  rightTitle,
+  leftIcon,
+  rightIcon,
+}: CardFooterProps) => {
   return (
-    <Sharing
-      icon={<QuestionOutlineIcon />}
-      footer={'learn about sharing'}
+    <Flex
+      bg={'white'}
+      p={2}
+      justify="space-between"
+      align="center"
+      borderBottom=" 1px solid #E5E7EB"
       bgColor="#F9FAFB"
     >
-      <Box display="flex" gap="5px" alignItems="center">
-        <LinkIcon />
-        <Text fontSize="14px" fontWeight="500" color="#6B7280">
-          Copy Link
-        </Text>
+      <IconText title={leftTitle} icon={leftIcon} />
+      <Box position="relative" right="10px">
+        <IconText title={rightTitle} icon={rightIcon} />
       </Box>
-    </Sharing>
+    </Flex>
   )
 }
 

@@ -3,16 +3,16 @@ import React from 'react'
 
 interface InputSearchProps {
   name: string
-  filter: (e: { target: { value: any } }) => void
+  onChange?: (e: any) => void
   placeholder: string
 }
-const InputSearch = ({ name, filter, placeholder }: InputSearchProps) => {
+const InputSearch = ({ name, onChange, placeholder }: InputSearchProps) => {
   return (
     <InputGroup size="sm" p={2} width="60%" outline="none" border="#F3F4F6">
       <Input
         type="search"
         value={name}
-        onChange={filter}
+        onChange={onChange}
         className="input"
         placeholder={placeholder}
         _focus={{
