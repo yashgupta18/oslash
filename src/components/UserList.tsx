@@ -4,7 +4,7 @@ import { UsersType } from '../stories/Filter'
 
 interface UserListProps {
   obj: UsersType
-  clickHandler: (user: any) => void
+  clickHandler?: (user: any) => void
   children?: React.ReactElement
 }
 const UserList = ({ obj, clickHandler, children }: UserListProps) => {
@@ -14,7 +14,7 @@ const UserList = ({ obj, clickHandler, children }: UserListProps) => {
       <ListItem
         key={obj.name}
         className="user"
-        onClick={() => clickHandler(obj)}
+        onClick={() => clickHandler && clickHandler(obj)}
       >
         {children}
         {obj.name}
